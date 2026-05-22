@@ -1,0 +1,40 @@
+{
+  "name": "socratic-mentor",
+  "version": "1.0.0",
+  "description": "Socratic teaching skill for Claude Code and Codex — guide learners to discover answers through questioning instead of handing over conclusions.",
+  "author": "Lester",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "socratic-mentor": "./bin/socratic-mentor.mjs"
+  },
+  "files": [
+    "bin",
+    "SKILL.md",
+    "resources",
+    ".codex",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5p2O5pe25ouT/socratic-mentor.git"
+  },
+  "homepage": "https://github.com/5p2O5pe25ouT/socratic-mentor#readme",
+  "bugs": {
+    "url": "https://github.com/5p2O5pe25ouT/socratic-mentor/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "skill",
+    "socratic",
+    "teaching",
+    "mentoring",
+    "agent"
+  ]
+}
