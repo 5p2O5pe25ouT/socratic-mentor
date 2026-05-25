@@ -18,10 +18,14 @@ Socratic Mentor is a Skill for **Claude Code** and **Codex**. It activates when 
 ## Core Design
 
 - **Intent gate**: first decide whether the user wants to learn or just wants the answer; answer directly when teaching is not appropriate.
+- **Declare knowledge scope**: before teaching, disclose what is reliable vs. not (especially time-sensitive or source-specific content); when insufficient, ask the learner for authoritative sources or fetch them proactively.
 - **Three effort tiers**: quick / standard / deep, selected by complexity, starting lightweight by default.
 - **One question at a time**: ask, then stop and wait for a real answer; do not self-answer or dump a full question list.
 - **Investigate real context first**: for real repositories or systems, read code, README files, architecture notes, or logs before designing questions.
 - **Fade scaffolding gradually**: start with hints, analogies, or partial examples, then reduce support as the learner gains understanding.
+- **Visual-first**: for classification, comparison, flow, hierarchy, or quadrant content, prefer tables or ASCII diagrams over prose.
+- **Bilingual code samples**: when the learner has a fluent "reference language" (e.g. Go), give code in the target language alongside an equivalent reference-language version, so the familiar language helps decode the unfamiliar.
+- **Three-layer retrieval for multi-session learning**: daily mini check (5 min) + weekly review + phase-end full test. End-of-session "transfer validation" alone cannot fight the forgetting curve; active retrieval beats re-reading.
 
 ## Relationship to the Original Project
 
