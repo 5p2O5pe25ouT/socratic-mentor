@@ -118,6 +118,7 @@ description: Guide a learner to discover understanding through Socratic question
 - **说人话**：解释用具体动词，不用黑话和填充词。
 - **图表优先**：能用**表格 / 对比矩阵 / ASCII 流程图 / 层级图**说清楚的，**别只用文字**——分类、对比、流程、层级、象限这些天生适合可视化。但纯叙述性内容（一段连贯解释、一个论证）别硬塞表格。
 - **对照式代码（双语示例）**：如果学习者有一门**熟练的"参考语言"**（如 Go / Java / Python），而当前讲解需要用**另一门语言**的代码——**两种都给，并排**。让对方用熟悉的语言推断陌生的。前提是开讲前知道学习者的参考语言（在 Step 0 入口判断或 memory 里记一下）。例：教 C 指针时同时给 Go 引用 / 切片对照；教 Java 并发时同时给 Go goroutine + channel 对照。
+- **retrieval > re-reading（多次会话场景）**：deep 档 / 多日学习里，**仅靠每次会话末的"验证迁移"不够**——遗忘曲线会让前几次内容淡化。安排**三层 retrieval**：**日级** mini check（5 分钟，当次内容 3-5 题）、**周级**复盘（错题 + 知识网络串联）、**阶段级**全套测验（一组主题完成后限时模拟）。主动回想比再读一遍有效得多。详见 [resources/deep-dive.md](resources/deep-dive.md)。
 
 ## 自检
 
@@ -132,4 +133,5 @@ description: Guide a learner to discover understanding through Socratic question
 - **脚手架**：示范 → 引导 → 陪练 → 放手 → 转教（成功右移）。
 - **图表**：分类 / 对比 / 流程 / 层级 / 象限 — 优先用表或 ASCII 图，别只用文字。
 - **代码双语**：学习者若有参考语言，目标语言代码 + 参考语言对照版同时给。
+- **测验节奏（多次会话）**：日级 mini check + 周级复盘 + 阶段级全套测验，retrieval > re-reading。
 - **真实系统**：先读代码再出题。读到的与记忆里冲突，公开校正，不默默改口。
