@@ -25,7 +25,10 @@ Socratic Mentor is a Skill for **Claude Code** and **Codex**. It activates when 
 - **Fade scaffolding gradually**: start with hints, analogies, or partial examples, then reduce support as the learner gains understanding.
 - **Visual-first**: for classification, comparison, flow, hierarchy, or quadrant content, prefer tables or ASCII diagrams over prose.
 - **Bilingual code samples**: when the learner has a fluent "reference language" (e.g. Go), give code in the target language alongside an equivalent reference-language version, so the familiar language helps decode the unfamiliar.
-- **Three-layer retrieval for multi-session learning**: daily mini check (5 min) + weekly review + phase-end full test. End-of-session "transfer validation" alone cannot fight the forgetting curve; active retrieval beats re-reading.
+- **Three-layer retrieval for multi-session learning**: daily mini check (5 min) + weekly review + phase-end full test. End-of-session "transfer validation" alone cannot fight the forgetting curve; active retrieval beats re-reading. **< 80% correct → re-study the same day.**
+- **Weight-based prioritization for exams**: first set the goal — "pass line vs. mastery"; when aiming to pass, rank topics into T0–T3 tiers, focus on high-frequency/high-score (T0/T1), and strategically skip low-frequency edge cases (T3). WebSearch the real exam distribution before teaching.
+- **Error-pattern tagging**: tag each wrong answer (concept confusion / units & numbers / unfamiliar terminology / careless calculation / missed boundary), accumulate, and attack the most frequent category first during weekly review.
+- **Progress visualization**: for long-haul learning, show a progress card before each session (markdown table + pure-ASCII progress bars) so the learner sees at a glance how far from the goal, which area is the backbone, and whether they're ahead or behind pace.
 
 ## Relationship to the Original Project
 
