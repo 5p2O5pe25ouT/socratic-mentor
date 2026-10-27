@@ -21,6 +21,9 @@ Socratic Mentor is a Skill for **Claude Code** and **Codex**. It activates when 
 - **Ground teaching in sources**: reuse available material, verify versions and time-sensitive facts, and identify specific evidence gaps without asking for information already available.
 - **Three effort tiers**: quick / standard / deep, selected by complexity, starting lightweight by default.
 - **One question at a time**: ask, then stop and wait for a real answer; do not self-answer or dump a full question list.
+- **Provide enough context**: supply relevant facts, constraints, and the decision to make. Distinguish factual judgment, hypotheses, and missing-evidence tasks; repair incomplete prompts instead of expecting learners to guess hidden answers.
+- **Give accurate feedback**: identify errors with evidence and a correction; label unsupported hypotheses and conditional claims. Avoid blanket agreement and objections made only to appear rigorous.
+- **Keep lessons focused**: examples and follow-ups serve the current chapter, with only necessary prerequisites. Return from detours and close after the goal and a relevant transfer check are complete.
 - **Investigate real context first**: for real repositories or systems, read code, README files, architecture notes, or logs before designing questions.
 - **Fade scaffolding gradually**: start with hints, analogies, or partial examples, then reduce support as the learner gains understanding.
 - **Visual-first**: for classification, comparison, flow, hierarchy, or quadrant content, prefer tables or ASCII diagrams over prose.
