@@ -18,17 +18,22 @@ Socratic Mentor is a Skill for **Claude Code** and **Codex**. It activates when 
 ## Core Design
 
 - **Intent gate**: first decide whether the user wants to learn or just wants the answer; answer directly when teaching is not appropriate.
-- **Declare knowledge scope**: before teaching, disclose what is reliable vs. not (especially time-sensitive or source-specific content); when insufficient, ask the learner for authoritative sources or fetch them proactively.
+- **Ground teaching in sources**: reuse available material, verify versions and time-sensitive facts, and identify specific evidence gaps without asking for information already available.
 - **Three effort tiers**: quick / standard / deep, selected by complexity, starting lightweight by default.
 - **One question at a time**: ask, then stop and wait for a real answer; do not self-answer or dump a full question list.
+- **Provide enough context**: supply relevant facts, constraints, and the decision to make. Distinguish factual judgment, hypotheses, and missing-evidence tasks; repair incomplete prompts instead of expecting learners to guess hidden answers.
+- **Give accurate feedback**: identify errors with evidence and a correction; label unsupported hypotheses and conditional claims. Avoid blanket agreement and objections made only to appear rigorous.
+- **Keep lessons focused**: examples and follow-ups serve the current chapter, with only necessary prerequisites. Return from detours and close after the goal and a relevant transfer check are complete.
 - **Investigate real context first**: for real repositories or systems, read code, README files, architecture notes, or logs before designing questions.
 - **Fade scaffolding gradually**: start with hints, analogies, or partial examples, then reduce support as the learner gains understanding.
 - **Visual-first**: for classification, comparison, flow, hierarchy, or quadrant content, prefer tables or ASCII diagrams over prose.
 - **Bilingual code samples**: when the learner has a fluent "reference language" (e.g. Go), give code in the target language alongside an equivalent reference-language version, so the familiar language helps decode the unfamiliar.
-- **Three-layer retrieval for multi-session learning**: daily mini check (5 min) + weekly review + phase-end full test. End-of-session "transfer validation" alone cannot fight the forgetting curve; active retrieval beats re-reading. **< 80% correct → re-study the same day.**
-- **Weight-based prioritization for exams**: first set the goal — "pass line vs. mastery"; when aiming to pass, rank topics into T0–T3 tiers, focus on high-frequency/high-score (T0/T1), and strategically skip low-frequency edge cases (T3). WebSearch the real exam distribution before teaching.
-- **Error-pattern tagging**: tag each wrong answer (concept confusion / units & numbers / unfamiliar terminology / careless calculation / missed boundary), accumulate, and attack the most frequent category first during weekly review.
-- **Progress visualization**: for long-haul learning, show a progress card before each session (markdown table + pure-ASCII progress bars) so the learner sees at a glance how far from the goal, which area is the backbone, and whether they're ahead or behind pace.
+- **Review according to the goal**: combine unit checks, spaced review, and practical tasks using the course’s agreed standard. Revisit unresolved misconceptions without imposing a universal 80% advancement threshold.
+- **Weight-based prioritization for exams**: first set the goal — "pass line vs. mastery"; when aiming to pass, rank topics into T0–T3 tiers, focus on high-frequency/high-score (T0/T1), and strategically skip low-frequency edge cases (T3). Verify the applicable syllabus and available exam samples; reuse current authoritative material and do not turn sample-based estimates into a guarantee of passing.
+- **Error-pattern tagging**: tag each wrong answer (concept confusion / units & numbers / unfamiliar terminology / careless calculation / missed boundary), then prioritize review using sample size, frequency, and impact.
+- **Resume from evidence**: use recent answers to distinguish material covered, completion with hints, independent validation, and pending review; avoid repeated diagnosis and invented progress percentages.
+- **Adapt when useful**: follow the learner’s stated language and presentation preferences. In bilingual learning, assess subject reasoning before correcting expression; use visible diagrams when mental imagery is unsuitable.
+- **Respect write scope**: teaching does not automatically authorize code changes, persistent memory writes, or reminders. Keep personal learning records and internal project material out of public artifacts.
 
 ## Relationship to the Original Project
 
@@ -103,7 +108,9 @@ walk me through X
 带我搞懂 X
 ```
 
-When you explicitly ask for a direct answer, it will not enter teaching mode.
+When you explicitly ask for a direct answer, it will not enter teaching mode. Requests to explain directly, pause, or end an ongoing lesson are also respected.
+
+To resume, try “continue from the pending checks in my last session.” It will first consult relevant learning records, asking only for missing context needed to resume. Notes and progress files are saved only when requested or already authorized by the course workflow. Reading source, passing tests, and observing runtime outcomes are reported separately.
 
 ## Directory Layout
 
